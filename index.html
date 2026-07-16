@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D6NDBBGGNC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D6NDBBGGNC');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>About Jason Niehoff | FTR · Futures Trading Revolution</title>
+<style>
+  :root {
+    --ground: #0B0F14;
+    --panel: #121820;
+    --panel-2: #0E141B;
+    --grid: #1C242E;
+    --edge: #263140;
+    --text: #E6EDF3;
+    --muted: #8B98A5;
+    --faint: #5C6875;
+    --qd-yellow: #FFD62E;
+    --qd-blue: #3DA6FF;
+    --pdl: #2EE6E6;
+    --risk: #E5484D;
+    --reward: #46C46E;
+    --mono: "Cascadia Code", "Consolas", ui-monospace, "SF Mono", Menlo, monospace;
+    --sans: "Montserrat", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  a { color: var(--qd-blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: 2px solid var(--qd-yellow); outline-offset: 2px; }
+
+  /* ---------- nav ---------- */
+  nav {
+    display: flex; align-items: center; gap: 28px;
+    padding-top: 18px; padding-bottom: 18px;
+    border-bottom: 1px solid var(--grid);
+  }
+  .wordmark {
+    font-family: var(--mono);
+    font-weight: 700; font-size: 16px; letter-spacing: 0.08em;
+    color: #141000;
+    background: var(--qd-yellow);
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+  .wordsub {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--muted);
+    margin-left: 10px; align-self: center;
+  }
+  nav .links { display: flex; gap: 22px; margin-left: auto; }
+  nav .links a { color: var(--muted); font-size: 14px; }
+  nav .links a:hover { color: var(--text); text-decoration: none; }
+  @media (max-width: 720px) { nav .links { display: none; } }
+
+  .btn {
+    display: inline-block;
+    font-family: var(--mono); font-size: 14px; font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn:hover { text-decoration: none; }
+  .btn-primary { background: var(--qd-yellow); color: #141000; }
+  .btn-primary:hover { background: #ffe15c; }
+  .btn-ghost { border-color: var(--edge); color: var(--text); background: transparent; }
+  .btn-ghost:hover { border-color: var(--muted); }
+
+  /* ---------- hero ---------- */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 56px;
+    align-items: center;
+    padding-top: 72px; padding-bottom: 72px;
+  }
+  @media (max-width: 900px) { .hero { grid-template-columns: 1fr; gap: 36px; } }
+
+  .portrait { position: relative; }
+  .portrait img {
+    display: block; width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--edge);
+  }
+  .nameplate {
+    position: absolute; left: -14px; bottom: 22px;
+    background: var(--qd-yellow); color: #141000;
+    padding: 10px 16px; border-radius: 3px;
+  }
+  .nameplate strong {
+    display: block; font-family: var(--sans); font-weight: 800; font-size: 18px;
+    line-height: 1.2;
+  }
+  .nameplate span {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--qd-yellow);
+    margin: 0 0 18px;
+  }
+  .hero h1 {
+    font-family: var(--sans); font-weight: 800;
+    font-size: clamp(30px, 4.2vw, 44px);
+    line-height: 1.15;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .hero h1 .hl { color: var(--qd-yellow); }
+  .hero p.lede { color: var(--muted); font-size: 18px; margin: 0; max-width: 56ch; }
+
+  /* ---------- movements ---------- */
+  .movement {
+    border-top: 1px solid var(--grid);
+    padding-top: 56px; padding-bottom: 56px;
+  }
+  .movement .inner { max-width: 720px; }
+  .movement h2 {
+    font-family: var(--sans); font-weight: 800; font-size: 26px;
+    margin: 0 0 20px; letter-spacing: -0.01em;
+  }
+  .movement p { color: var(--muted); margin: 0 0 18px; }
+  .movement p:last-child { margin-bottom: 0; }
+  .movement p strong { color: var(--text); font-weight: 700; }
+
+  /* ---------- signature strip ---------- */
+  .strip {
+    margin: 40px 0 8px;
+    border: 1px solid var(--grid);
+    border-radius: 6px;
+    background: var(--panel-2);
+    padding: 18px 18px 8px;
+  }
+  .strip svg { display: block; width: 100%; height: auto; }
+  .strip figcaption {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--faint);
+    padding: 10px 4px 8px;
+  }
+
+  /* ---------- what it is / is not ---------- */
+  .isnt {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+    margin-top: 36px;
+  }
+  @media (max-width: 760px) { .isnt { grid-template-columns: 1fr; } }
+  .isnt .cell {
+    background: var(--panel); border: 1px solid var(--grid);
+    border-radius: 6px; padding: 24px;
+  }
+  .isnt .cell.yes { border-top: 2px solid var(--reward); }
+  .isnt .cell.no { border-top: 2px solid var(--risk); }
+  .isnt h3 {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em;
+    text-transform: uppercase; margin: 0 0 14px;
+  }
+  .isnt .yes h3 { color: var(--reward); }
+  .isnt .no h3 { color: var(--risk); }
+  .isnt p { color: var(--muted); font-size: 15px; margin: 0; }
+
+  /* ---------- CTA row ---------- */
+  .paths {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px; margin-top: 40px;
+  }
+  .paths a.card {
+    display: flex; flex-direction: column; gap: 6px;
+    background: var(--panel); border: 1px solid var(--grid);
+    border-radius: 6px; padding: 20px 22px;
+    color: var(--text);
+  }
+  .paths a.card:hover { border-color: var(--edge); text-decoration: none; }
+  .paths .card .label {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--qd-yellow);
+  }
+  .paths .card .name { font-weight: 700; font-size: 16px; }
+  .paths .card .sub { color: var(--faint); font-size: 13px; }
+
+  /* ---------- footer ---------- */
+  footer {
+    border-top: 1px solid var(--grid);
+    padding-top: 36px; padding-bottom: 48px;
+    margin-top: 24px;
+  }
+  footer .row {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  footer .row a { color: var(--muted); font-size: 14px; }
+  footer .disclaimer { color: var(--faint); font-size: 12.5px; max-width: 84ch; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="wrap">
+  <span class="wordmark">FTR</span><span class="wordsub">Futures Trading Revolution</span>
+  <span class="links">
+    <a href="https://futurestradingrevolution.com">Home</a>
+    <a href="https://indicators.futurestradingrevolution.com">Indicators</a>
+    <a href="https://coaching.futurestradingrevolution.com">Coaching</a>
+    <a href="https://grade.futurestradingrevolution.com">Scorecard</a>
+    <a href="mailto:support@futurestradingrevolution.com">Support</a>
+  </span>
+</nav>
+
+<header class="hero wrap">
+  <div class="portrait">
+    <!-- Drop your homepage portrait into the repo as jason-niehoff.jpg, or update this src -->
+    <img src="jason-niehoff.jpg" alt="Jason Niehoff performing on gongs with the National Symphony Orchestra">
+    <div class="nameplate">
+      <strong>Jason Niehoff</strong>
+      <span>Founder &middot; Head Coach</span>
+    </div>
+  </div>
+  <div>
+    <p class="eyebrow">The full story</p>
+    <h1>No do-overs on stage. <span class="hl">None at the hard right edge.</span></h1>
+    <p class="lede">I'm Jason Niehoff. I've spent 22 years performing as a professional percussionist, 14 of them in the US Navy Band, and today I perform regularly with the National Symphony Orchestra. I also trade futures. This page is the story of why those are the same job.</p>
+  </div>
+</header>
+
+<section class="movement">
+  <div class="wrap"><div class="inner">
+    <p class="eyebrow">Movement I &middot; The stage</p>
+    <h2>A concert hall is an honest place.</h2>
+    <p>When the lights come up, nobody cares how you felt in the warmup room. There is one take. The orchestra doesn't stop because your hands are cold, and the audience doesn't grade on effort. Twenty-two years of performing at that level, through 14 years in the US Navy Band and season after season with the National Symphony Orchestra, teaches you something that never appears on the program: <strong>the performance is decided before it starts.</strong></p>
+    <p>It's decided in the practice room. Slow tempos before fast ones. The hard two bars isolated and repeated until they stop being hard. Recording yourself and listening back to what you actually played, not what you hoped you played. Musicians call this deliberate practice, and it is the least glamorous, most reliable technology humans have ever invented for performing under pressure.</p>
+  </div></div>
+</section>
+
+<section class="movement">
+  <div class="wrap"><div class="inner">
+    <p class="eyebrow">Movement II &middot; The chart</p>
+    <h2>Then I met a stage with no rehearsal.</h2>
+    <p>Futures trading looked, from the outside, like a completely different world. It isn't. The chart is a live performance that never stops, and the hard right edge, the newest bar, where you have to act without knowing what comes next, does not care about your confidence any more than a concert hall does. Winging it does not survive contact with either one.</p>
+    <p>Today I trade micro futures, MES, MGC, and MCL, on NinjaTrader, every trade journaled and reviewed the way a musician reviews a recording. <strong>Not because journaling is fun. Because feedback you don't collect is feedback you don't get.</strong> The market gives you an honest grade every single session; most traders just never write it down.</p>
+  </div></div>
+</section>
+
+<section class="movement">
+  <div class="wrap"><div class="inner">
+    <p class="eyebrow">Movement III &middot; The practice room</p>
+    <h2>Practice is practice.</h2>
+    <p>No musician hopes their way through a concerto. You slow it down, you isolate the passage that keeps breaking, you repeat it with honest feedback until it holds, and then you perform it at tempo. That exact loop is how trading discipline is actually built: one setup at a time, sized small, journaled honestly, reviewed without flinching, then executed live.</p>
+    <p>Everything I teach, and every tool I build, is that loop in a different costume.</p>
+    <figure class="strip">
+      <svg viewBox="0 0 800 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A metronome practice pattern on the left transitions into price candles on the right">
+        <line x1="0" y1="60" x2="800" y2="60" stroke="#1C242E" stroke-width="1"/>
+        <!-- practice ticks: even, measured -->
+        <g stroke="#8B98A5" stroke-width="3">
+          <line x1="40"  y1="42" x2="40"  y2="78"/>
+          <line x1="90"  y1="42" x2="90"  y2="78"/>
+          <line x1="140" y1="42" x2="140" y2="78"/>
+          <line x1="190" y1="42" x2="190" y2="78"/>
+          <line x1="240" y1="42" x2="240" y2="78"/>
+          <line x1="290" y1="42" x2="290" y2="78"/>
+        </g>
+        <line x1="340" y1="36" x2="340" y2="84" stroke="#FFD62E" stroke-width="3"/>
+        <!-- performance candles -->
+        <g>
+          <line x1="400" y1="30" x2="400" y2="90" stroke="#46C46E" stroke-width="2"/>
+          <rect x="392" y="44" width="16" height="30" fill="#46C46E"/>
+          <line x1="450" y1="26" x2="450" y2="80" stroke="#E5484D" stroke-width="2"/>
+          <rect x="442" y="36" width="16" height="28" fill="#E5484D"/>
+          <line x1="500" y1="34" x2="500" y2="88" stroke="#46C46E" stroke-width="2"/>
+          <rect x="492" y="46" width="16" height="26" fill="#46C46E"/>
+          <line x1="550" y1="22" x2="550" y2="72" stroke="#46C46E" stroke-width="2"/>
+          <rect x="542" y="30" width="16" height="28" fill="#46C46E"/>
+          <line x1="600" y1="18" x2="600" y2="66" stroke="#E5484D" stroke-width="2"/>
+          <rect x="592" y="26" width="16" height="24" fill="#E5484D"/>
+          <line x1="650" y1="24" x2="650" y2="70" stroke="#46C46E" stroke-width="2"/>
+          <rect x="642" y="32" width="16" height="26" fill="#46C46E"/>
+          <line x1="700" y1="14" x2="700" y2="58" stroke="#46C46E" stroke-width="2"/>
+          <rect x="692" y="22" width="16" height="24" fill="#46C46E"/>
+        </g>
+      </svg>
+      <figcaption>Practice tempo on the left. Performance on the right. Same discipline.</figcaption>
+    </figure>
+  </div></div>
+</section>
+
+<section class="movement">
+  <div class="wrap"><div class="inner">
+    <p class="eyebrow">Movement IV &middot; The work</p>
+    <h2>Futures Trading Revolution is that loop, built out.</h2>
+    <p>FTR is where I teach trading the way professional skills are actually built. A year-long 1:1 coaching program structured like serious study: foundation first, then application, then independence. A free scorecard that grades your trading behavior from your own NinjaTrader data, because you can't fix what you won't measure. A YouTube channel of practical, no-fluff NinjaTrader work. And tools I built for my own charts, hardened live before they were ever offered to anyone else.</p>
+
+    <div class="isnt">
+      <div class="cell yes">
+        <h3>What you'll find here</h3>
+        <p>Process, structure, honest measurement, deliberate practice, and tools that respect how discretionary traders actually work.</p>
+      </div>
+      <div class="cell no">
+        <h3>What you won't</h3>
+        <p>Signals, hype, profit promises, rented lifestyles, or anyone telling you trading is easy. It isn't. That's exactly why it can be practiced.</p>
+      </div>
+    </div>
+
+    <div class="paths">
+      <a class="card" href="https://grade.futurestradingrevolution.com">
+        <span class="label">Free</span>
+        <span class="name">Grade your trading</span>
+        <span class="sub">The FTR Trait Scorecard</span>
+      </a>
+      <a class="card" href="https://indicators.futurestradingrevolution.com">
+        <span class="label">Tools</span>
+        <span class="name">Browse the indicators</span>
+        <span class="sub">Built for NinjaTrader 8</span>
+      </a>
+      <a class="card" href="https://www.youtube.com/channel/UCu-KvQkcbJjt_CUi6bFaGkw">
+        <span class="label">Watch</span>
+        <span class="name">The channel</span>
+        <span class="sub">Practical NinjaTrader work</span>
+      </a>
+      <a class="card" href="https://coaching.futurestradingrevolution.com">
+        <span class="label">1:1</span>
+        <span class="name">Work with me</span>
+        <span class="sub">A year of structured practice</span>
+      </a>
+    </div>
+  </div></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span class="wordmark">FTR</span>
+      <a href="https://futurestradingrevolution.com">Home</a>
+      <a href="https://indicators.futurestradingrevolution.com">Indicators</a>
+      <a href="https://coaching.futurestradingrevolution.com">Coaching</a>
+      <a href="mailto:support@futurestradingrevolution.com">support@futurestradingrevolution.com</a>
+    </div>
+    <p class="disclaimer">FTR, Futures Trading Revolution. Futures trading involves substantial risk of loss and is not suitable for all investors. Past performance is not indicative of future results. Nothing on this site is a recommendation to buy or sell any financial instrument. NinjaTrader is a registered trademark of NinjaTrader Group, LLC. FTR is not affiliated with or endorsed by NinjaTrader Group, LLC.</p>
+  </div>
+</footer>
+
+</body>
+</html>
