@@ -27,7 +27,7 @@
     --text: #E6EDF3;
     --muted: #8B98A5;
     --faint: #5C6875;
-    --qd-yellow: #fff205;
+    --qd-yellow: #FFD62E;
     --qd-blue: #3DA6FF;
     --pdl: #2EE6E6;
     --risk: #E5484D;
@@ -54,6 +54,7 @@
   a:hover { text-decoration: underline; }
   :focus-visible { outline: 2px solid var(--qd-yellow); outline-offset: 2px; }
 
+  /* ---------- nav ---------- */
   nav {
     display: flex; align-items: center; gap: 28px;
     padding-top: 18px; padding-bottom: 18px;
@@ -88,10 +89,11 @@
   }
   .btn:hover { text-decoration: none; }
   .btn-primary { background: var(--qd-yellow); color: #141000; }
-  .btn-primary:hover { background: #fff752; }
+  .btn-primary:hover { background: #ffe15c; }
   .btn-ghost { border-color: var(--edge); color: var(--text); background: transparent; }
   .btn-ghost:hover { border-color: var(--muted); }
 
+  /* ---------- hero ---------- */
   .hero {
     display: grid;
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
@@ -137,6 +139,7 @@
   .hero h1 .hl { color: var(--qd-yellow); }
   .hero p.lede { color: var(--muted); font-size: 18px; margin: 0; max-width: 56ch; }
 
+  /* ---------- movements ---------- */
   .movement {
     border-top: 1px solid var(--grid);
     padding-top: 56px; padding-bottom: 56px;
@@ -150,6 +153,7 @@
   .movement p:last-child { margin-bottom: 0; }
   .movement p strong { color: var(--text); font-weight: 700; }
 
+  /* ---------- signature strip ---------- */
   .strip {
     margin: 40px 0 8px;
     border: 1px solid var(--grid);
@@ -158,13 +162,13 @@
     padding: 18px 18px 8px;
   }
   .strip svg { display: block; width: 100%; height: auto; }
-  .strip img { display: block; width: 100%; height: auto; border-radius: 4px; border: 1px solid var(--grid); }
   .strip figcaption {
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
     text-transform: uppercase; color: var(--faint);
     padding: 10px 4px 8px;
   }
 
+  /* ---------- what it is / is not ---------- */
   .isnt {
     display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
     margin-top: 36px;
@@ -184,6 +188,7 @@
   .isnt .no h3 { color: var(--risk); }
   .isnt p { color: var(--muted); font-size: 15px; margin: 0; }
 
+  /* ---------- CTA row ---------- */
   .paths {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 18px; margin-top: 40px;
@@ -202,6 +207,7 @@
   .paths .card .name { font-weight: 700; font-size: 16px; }
   .paths .card .sub { color: var(--faint); font-size: 13px; }
 
+  /* ---------- footer ---------- */
   footer {
     border-top: 1px solid var(--grid);
     padding-top: 36px; padding-bottom: 48px;
@@ -234,6 +240,7 @@
 
 <header class="hero wrap">
   <div class="portrait">
+    <!-- Drop your homepage portrait into the repo as jason-niehoff.jpg, or update this src -->
     <img src="jason-niehoff.jpg" alt="Jason Niehoff performing on gongs with the National Symphony Orchestra">
     <div class="nameplate">
       <strong>Jason Niehoff</strong>
@@ -262,10 +269,6 @@
     <h2>Then I met a stage with no rehearsal.</h2>
     <p>Futures trading looked, from the outside, like a completely different world. It isn't. The chart is a live performance that never stops, and the hard right edge, the newest bar, where you have to act without knowing what comes next, does not care about your confidence any more than a concert hall does. Winging it does not survive contact with either one.</p>
     <p>Today I trade micro futures, MES, MGC, and MCL, on NinjaTrader, every trade journaled and reviewed the way a musician reviews a recording. <strong>Not because journaling is fun. Because feedback you don't collect is feedback you don't get.</strong> The market gives you an honest grade every single session; most traders just never write it down.</p>
-    <figure class="strip">
-      <img src="jason-trading-wide.jpg" alt="Jason Niehoff at his trading desk with NinjaTrader charts across four monitors">
-      <figcaption>The other stage. No rehearsal here either.</figcaption>
-    </figure>
   </div></div>
 </section>
 
@@ -278,6 +281,7 @@
     <figure class="strip">
       <svg viewBox="0 0 800 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A metronome practice pattern on the left transitions into price candles on the right">
         <line x1="0" y1="60" x2="800" y2="60" stroke="#1C242E" stroke-width="1"/>
+        <!-- practice ticks: even, measured -->
         <g stroke="#8B98A5" stroke-width="3">
           <line x1="40"  y1="42" x2="40"  y2="78"/>
           <line x1="90"  y1="42" x2="90"  y2="78"/>
@@ -286,7 +290,8 @@
           <line x1="240" y1="42" x2="240" y2="78"/>
           <line x1="290" y1="42" x2="290" y2="78"/>
         </g>
-        <line x1="340" y1="36" x2="340" y2="84" stroke="#fff205" stroke-width="3"/>
+        <line x1="340" y1="36" x2="340" y2="84" stroke="#FFD62E" stroke-width="3"/>
+        <!-- performance candles -->
         <g>
           <line x1="400" y1="30" x2="400" y2="90" stroke="#46C46E" stroke-width="2"/>
           <rect x="392" y="44" width="16" height="30" fill="#46C46E"/>
@@ -359,8 +364,13 @@
       <a href="https://indicators.futurestradingrevolution.com">Indicators</a>
       <a href="https://coaching.futurestradingrevolution.com">Coaching</a>
       <a href="mailto:support@futurestradingrevolution.com">support@futurestradingrevolution.com</a>
+      <a href="https://www.futurestradingrevolution.com/disclaimer">Disclosures</a>
     </div>
-    <p class="disclaimer">FTR, Futures Trading Revolution. Futures trading involves substantial risk of loss and is not suitable for all investors. Past performance is not indicative of future results. Nothing on this site is a recommendation to buy or sell any financial instrument. NinjaTrader is a registered trademark of NinjaTrader Group, LLC. FTR is not affiliated with or endorsed by NinjaTrader Group, LLC.</p>
+    <p class="disclaimer">FTR, Futures Trading Revolution. Nothing on this site is a recommendation to buy or sell any financial instrument.</p>
+    <p class="disclaimer"><strong>Risk Disclosure:</strong> Futures and forex trading contains substantial risk and is not for every investor. An investor could potentially lose all or more than the initial investment. Risk capital is money that can be lost without jeopardizing ones' financial security or lifestyle. Only risk capital should be used for trading and only those with sufficient risk capital should consider trading. Past performance is not necessarily indicative of future results.</p>
+    <p class="disclaimer"><strong>Hypothetical Performance Disclosure:</strong> Hypothetical performance results have many inherent limitations, some of which are described below. No representation is being made that any account will or is likely to achieve profits or losses similar to those shown; in fact, there are frequently sharp differences between hypothetical performance results and the actual results subsequently achieved by any particular trading program. One of the limitations of hypothetical performance results is that they are generally prepared with the benefit of hindsight. In addition, hypothetical trading does not involve financial risk, and no hypothetical trading record can completely account for the impact of financial risk of actual trading. for example, the ability to withstand losses or to adhere to a particular trading program in spite of trading losses are material points which can also adversely affect actual trading results. There are numerous other factors related to the markets in general or to the implementation of any specific trading program which cannot be fully accounted for in the preparation of hypothetical performance results and all which can adversely affect trading results.</p>
+    <p class="disclaimer"><strong>Testimonial Disclosure:</strong> Testimonials appearing on this website may not be representative of other clients or customers and is not a guarantee of future performance or success.</p>
+    <p class="disclaimer">NinjaTrader is a registered trademark of NinjaTrader Group, LLC. FTR is an independent vendor in the NinjaTrader Ecosystem and is not owned or operated by NinjaTrader Group, LLC.</p>
   </div>
 </footer>
 
